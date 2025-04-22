@@ -16,5 +16,7 @@ public class Main {
             new Quotes(9,"LAAALALALAL"),
             new Quotes(10,"LALALALALALALALAL")
         };
+
+        System.out.println(Arrays.toString(quotes));
     }
 }
