@@ -1,11 +1,7 @@
 package org.example;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.Scanner;
 public class Main {
-    Scanner read = new Scanner(System.in);
     public static void main(String[] args) {
 
         Product p1 = new Product();

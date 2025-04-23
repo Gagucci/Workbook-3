@@ -3,7 +3,6 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.classfile.constantpool.InterfaceMethodRefEntry;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,13 +33,16 @@ public class EmployeeReader {
                 if (column.length == 4) {
                     int employeeId = Integer.parseInt(column[0]);
                     String name = column[1];
-                    int hoursWorked = Integer.parseInt(column[2]);
+                    float hoursWorked = Float.parseFloat(column[2]);
                     double payRate = Double.parseDouble(column[3]);
 
+                    Employee e = new Employee(employeeId, name, hoursWorked, payRate);
+                    employeeList.add(e);
 
                 }
 
             }
+                reader.close();
 
         } catch (IOException e) {
             System.out.println("There was an error reading the file: " + e.getMessage());
