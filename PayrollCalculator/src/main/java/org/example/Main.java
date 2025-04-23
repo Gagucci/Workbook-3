@@ -12,8 +12,9 @@ public class Main {
         for (Employee employee : employees) {
             System.out.printf("ID: %d\n", employee.getEmployeeId());
             System.out.printf("Name: %s\n", employee.getName());
-            System.out.printf("Hours Worked: %f\n", employee.getHoursWorked());
+            System.out.printf("Hours Worked: %.2f\n", employee.getHoursWorked());
             System.out.printf("Pay Rate: %.2f\n", employee.getPayRate());
+            System.out.printf("Bi-Weekly Pay: %.2f\n", employee.calculateBiWeeklyPay());
         }
 
 
