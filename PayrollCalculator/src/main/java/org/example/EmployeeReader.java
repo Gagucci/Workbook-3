@@ -31,11 +31,12 @@ public class EmployeeReader {
                 String[] column = line.split("\\|");
                 // Check if the line has exactly 4 parts (id, name, hoursWorked, payRate)
                 if (column.length == 4) {
+                    // Parse the values from the line
                     int employeeId = Integer.parseInt(column[0]);
                     String name = column[1];
                     float hoursWorked = Float.parseFloat(column[2]);
                     double payRate = Double.parseDouble(column[3]);
-
+                    // Create a new Employee object using the parsed values and add it to the list
                     Employee e = new Employee(employeeId, name, hoursWorked, payRate);
                     employeeList.add(e);
 
@@ -47,7 +48,7 @@ public class EmployeeReader {
         } catch (IOException e) {
             System.out.println("There was an error reading the file: " + e.getMessage());
         }
-
+        // Return the list of employees to be referenced in other classes
         return employeeList;
     }
 

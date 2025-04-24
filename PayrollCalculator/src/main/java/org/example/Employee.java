@@ -18,10 +18,10 @@ public class Employee {
     public float getHoursWorked() { return hoursWorked; }
     public double getPayRate() { return payRate; }
 
-//    public void setEmployeeId(int _employeeId) { this.employeeId = _employeeId; }
-//    public void setName(String _name) { this.name = _name; }
-//    public void setHoursWorked(float _hoursWorked) { this.hoursWorked = _hoursWorked; }
-//    public void setPayRate(double _payRate) { this.payRate = _payRate; }
+    public void setEmployeeId(int _employeeId) { this.employeeId = _employeeId; }
+    public void setName(String _name) { this.name = _name; }
+    public void setHoursWorked(float _hoursWorked) { this.hoursWorked = _hoursWorked; }
+    public void setPayRate(double _payRate) { this.payRate = _payRate; }
 
     public float calculateBiWeeklyPay() {
         return (float) ((hoursWorked * payRate) * 2);
