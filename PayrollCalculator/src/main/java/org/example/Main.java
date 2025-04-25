@@ -17,6 +17,5 @@ public class Main {
         // static calling of the PayrollWriter class to write the employee data to a file
         PayrollWriter.payRollCalculator();
 
-
     }
 }
