@@ -85,6 +85,7 @@ public class Inventory {
     }
 
     public static void displayInventory() {
+
         for (Product product : inventory) {
             System.out.println("Product ID: " + product.getId());
             System.out.println("Product Name: " + product.getName());
@@ -107,16 +108,23 @@ public class Inventory {
 
         Product newProduct = new Product(productId, productName, productPrice);
         inventory.add(newProduct);
-        try (FileWriter writer = new FileWriter("inventory.csv", true)) {
+        try {
+
+            FileWriter FileWriter = new FileWriter("inventory.csv");
+            BufferedWriter writer = new BufferedWriter(FileWriter);
             writer.write(productId + "|" + productName + "|" + productPrice + "\n");
+
         } catch (IOException e) {
+
             System.out.println("Error writing to file: " + e.getMessage());
+
         }
 
         System.out.println("Product added successfully!");
     }
 
     public static void searchProductById() {
+
         System.out.println("Enter the product ID you want to search for:");
         int productId = read.nextInt();
         read.nextLine();
