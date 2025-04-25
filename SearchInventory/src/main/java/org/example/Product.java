@@ -5,6 +5,13 @@ public class Product {
     private String name;
     private float price;
 
+    //empty constructor
+    public Product() {
+        this.id = 0;
+        this.name = "";
+        this.price = 0.0f;
+    }
+
     public Product(int _id, String _name, float _price) {
         this.id = _id;
         this.name = _name;
@@ -14,5 +21,9 @@ public class Product {
     public int getId() { return this.id; }
     public String getName() { return this.name; }
     public float getPrice() { return this.price; }
+
+    public void setId(int _id) { this.id = _id; }
+    public void setName(String _name) { this.name = _name; }
+    public void setPrice(float _price) { this.price = _price; }
 
 }
