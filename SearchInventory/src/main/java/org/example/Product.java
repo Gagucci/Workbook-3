@@ -5,12 +5,6 @@ public class Product {
     private String name;
     private float price;
 
-    //empty constructor
-    public Product() {
-        this.id = 0;
-        this.name = "";
-        this.price = 0.0f;
-    }
 
     public Product(int _id, String _name, float _price) {
         this.id = _id;

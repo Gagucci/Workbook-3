@@ -113,6 +113,7 @@ public class Inventory {
             FileWriter FileWriter = new FileWriter("inventory.csv");
             BufferedWriter writer = new BufferedWriter(FileWriter);
             writer.write(productId + "|" + productName + "|" + productPrice + "\n");
+            writer.close();
 
         } catch (IOException e) {
 
